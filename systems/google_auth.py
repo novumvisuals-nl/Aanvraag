@@ -37,7 +37,7 @@ def get_credentials() -> Credentials:
     creds = None
 
     # --- Productie: lees token uit environment variable ---
-    token_env = os.environ.get("GOOGLE_TOKEN_JSON")
+    token_env = os.environ.get("GOOGLE_TOKEN_JSON", "").strip()
     if token_env:
         creds = Credentials.from_authorized_user_info(json.loads(token_env), SCOPES)
 
