@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Productie aanvragen — Novum Visuals</title>
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-inner">
+      <img src="/static/images/logo-color-white.png" alt="Novum Visuals" class="logo-img" />
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <img src="/static/images/symbol-color.png" alt="" class="hero-symbol" />
+      <p class="hero-label">Jouw productie starten</p>
+      <h1 class="hero-title">Vertel ons<br /><span class="gradient-text">jouw verhaal</span></h1>
+      <p class="hero-sub">Vul het aanvraagformulier in. Wij zorgen voor de rest — van planning tot eindresultaat.</p>
+    </div>
+    <div class="hero-decor">
+      <div class="decor-circle decor-1"></div>
+      <div class="decor-circle decor-2"></div>
+    </div>
+  </section>
+
+  <!-- MAIN -->
+  <main class="main">
+    <div class="container">
+
+      <!-- STEP INDICATOR -->
+      <div class="steps-indicator" id="steps-indicator">
+        <div class="step-item active" data-step="1">
+          <div class="step-dot">1</div>
+          <span>Jouw bedrijf</span>
+        </div>
+        <div class="step-line"></div>
+        <div class="step-item" data-step="2">
+          <div class="step-dot">2</div>
+          <span>Productie</span>
+        </div>
+        <div class="step-line"></div>
+        <div class="step-item" data-step="3">
+          <div class="step-dot">3</div>
+          <span>Planning</span>
+        </div>
+        <div class="step-line"></div>
+        <div class="step-item" data-step="4">
+          <div class="step-dot">4</div>
+          <span>Stijl</span>
+        </div>
+      </div>
+
+      <!-- FORM -->
+      <form id="draaiboek-form">
+
+        <!-- STAP 1: JOUW BEDRIJF -->
+        <div class="form-step active" id="step-1">
+          <div class="step-header">
+            <div class="step-number-badge">01</div>
+            <div>
+              <h2 class="step-title">Jouw bedrijf</h2>
+              <p class="step-desc">Vertel ons wie je bent en wanneer we aan de slag kunnen.</p>
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label" for="bedrijfsnaam">Bedrijfsnaam <span class="required">*</span></label>
+              <input class="form-input" type="text" id="bedrijfsnaam" name="bedrijfsnaam" placeholder="Bijv. Acme B.V." required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="project_naam">Naam van het project <span class="required">*</span></label>
+              <input class="form-input" type="text" id="project_naam" name="project_naam" placeholder="Bijv. Bedrijfsvideo 2025" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="productie_datum">Gewenste opnamedag <span class="required">*</span></label>
+              <input class="form-input" type="date" id="productie_datum" name="productie_datum" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="deadline_levering">Gewenste opleveringsdatum</label>
+              <input class="form-input" type="date" id="deadline_levering" name="deadline_levering" />
+            </div>
+            <div class="form-group full-width">
+              <label class="form-label" for="email_klant">Jouw e-mailadres <span class="required">*</span></label>
+              <input class="form-input" type="email" id="email_klant" name="email_klant" placeholder="jij@bedrijf.nl" required />
+            </div>
+          </div>
+
+          <div class="step-nav">
+            <div></div>
+            <button type="button" class="btn btn-primary" onclick="volgendeStap(1)">Volgende <span class="btn-arrow">→</span></button>
+          </div>
+        </div>
+
+        <!-- STAP 2: PRODUCTIETYPE & DOEL -->
+        <div class="form-step" id="step-2">
+          <div class="step-header">
+            <div class="step-number-badge">02</div>
+            <div>
+              <h2 class="step-title">Wat wil je laten maken?</h2>
+              <p class="step-desc">Kies het type productie en vertel ons wat je ermee wilt bereiken.</p>
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group full-width">
+              <label class="form-label">Type productie <span class="required">*</span></label>
+              <div class="medium-toggle">
+                <input type="radio" name="medium" id="medium-video" value="Video" class="medium-radio" />
+                <label for="medium-video" class="medium-card">
+                  <span class="medium-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <polygon points="23 7 16 12 23 17 23 7"/>
+                      <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+                    </svg>
+                  </span>
+                  <span class="medium-label">Video</span>
+                </label>
+
+                <input type="radio" name="medium" id="medium-foto" value="Foto" class="medium-radio" />
+                <label for="medium-foto" class="medium-card">
+                  <span class="medium-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+                      <circle cx="12" cy="13" r="4"/>
+                    </svg>
+                  </span>
+                  <span class="medium-label">Foto</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group full-width" id="soort-wrapper" style="display:none;">
+              <label class="form-label" for="productie_type">Soort productie <span class="required">*</span></label>
+              <div class="select-wrapper">
+                <select class="form-input form-select" id="productie_type" name="productie_type">
+                  <option value="" disabled selected>Selecteer soort productie</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group full-width">
+              <label class="form-label" for="productie_doel">Wat wil je bereiken?</label>
+              <textarea class="form-input form-textarea" id="productie_doel" name="productie_doel" placeholder="Bijv. Ons bedrijf introduceren bij nieuwe klanten, onze diensten laten zien, medewerkers werven..."></textarea>
+            </div>
+            <div class="form-group full-width">
+              <label class="form-label" for="doelgroep">Voor wie is dit?</label>
+              <input class="form-input" type="text" id="doelgroep" name="doelgroep" placeholder="Bijv. potentiële klanten, medewerkers, volgers op social media..." />
+            </div>
+          </div>
+
+          <div class="step-nav">
+            <button type="button" class="btn btn-ghost" onclick="vorigeStap(2)"><span class="btn-arrow">←</span> Vorige</button>
+            <button type="button" class="btn btn-primary" onclick="volgendeStap(2)">Volgende <span class="btn-arrow">→</span></button>
+          </div>
+        </div>
+
+        <!-- STAP 3: LOCATIE & PLANNING -->
+        <div class="form-step" id="step-3">
+          <div class="step-header">
+            <div class="step-number-badge">03</div>
+            <div>
+              <h2 class="step-title">Wanneer en waar?</h2>
+              <p class="step-desc">Geef ons een beeld van de locatie en hoe de dag eruit ziet.</p>
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group full-width">
+              <label class="form-label" for="locaties">Locatie(s)</label>
+              <textarea class="form-input form-textarea" id="locaties" name="locaties" placeholder="Bijv: ons kantoor in Amsterdam – Herengracht 100 / buiten bij de ingang"></textarea>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="crew_aanvang">Hoe laat kunnen wij er zijn?</label>
+              <div class="select-wrapper">
+                <select class="form-input form-select" id="crew_aanvang" name="crew_aanvang">
+                  <option value="" disabled selected>Selecteer tijdstip</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="shoot_aanvang">Wanneer beginnen we?</label>
+              <div class="select-wrapper">
+                <select class="form-input form-select" id="shoot_aanvang" name="shoot_aanvang">
+                  <option value="" disabled selected>Selecteer tijdstip</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="verwachte_eindtijd">Wanneer zijn we klaar?</label>
+              <div class="select-wrapper">
+                <select class="form-input form-select" id="verwachte_eindtijd" name="verwachte_eindtijd">
+                  <option value="" disabled selected>Selecteer tijdstip</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group full-width">
+              <label class="form-label" for="logistieke_opmerkingen">Praktische informatie</label>
+              <textarea class="form-input form-textarea small" id="logistieke_opmerkingen" name="logistieke_opmerkingen" placeholder="Parkeerplaats, toegangspas nodig, liften, buitenlocatie, andere bijzonderheden..."></textarea>
+            </div>
+          </div>
+
+          <div class="step-nav">
+            <button type="button" class="btn btn-ghost" onclick="vorigeStap(3)"><span class="btn-arrow">←</span> Vorige</button>
+            <button type="button" class="btn btn-primary" onclick="volgendeStap(3)">Volgende <span class="btn-arrow">→</span></button>
+          </div>
+        </div>
+
+        <!-- STAP 4: STIJL & WENSEN -->
+        <div class="form-step" id="step-4">
+          <div class="step-header">
+            <div class="step-number-badge">04</div>
+            <div>
+              <h2 class="step-title">Jouw stijl</h2>
+              <p class="step-desc">Hoe moet het aanvoelen? Wij vertalen jouw wensen naar een professionele productie.</p>
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group full-width">
+              <label class="form-label" for="stijl_referenties">Sfeer & voorbeelden</label>
+              <textarea class="form-input form-textarea" id="stijl_referenties" name="stijl_referenties" placeholder="Omschrijf de sfeer die je wilt uitstralen. Heb je video's of foto's gezien die je aanspreken? Beschrijf ze of plak een link."></textarea>
+            </div>
+            <div class="form-group full-width" id="muziek-wrapper">
+              <label class="form-label" for="muziek_sound">Muziek & geluid</label>
+              <input class="form-input" type="text" id="muziek_sound" name="muziek_sound" placeholder="Bijv. rustig en professioneel, energiek, voice-over, geen muziek..." />
+            </div>
+            <div class="form-group full-width">
+              <label class="form-label" for="speciale_instructies">Overige wensen</label>
+              <textarea class="form-input form-textarea small" id="speciale_instructies" name="speciale_instructies" placeholder="Bepaalde personen die in beeld moeten, dingen die we zeker niet mogen filmen, andere bijzonderheden..."></textarea>
+            </div>
+          </div>
+
+          <div class="step-nav">
+            <button type="button" class="btn btn-ghost" onclick="vorigeStap(4)"><span class="btn-arrow">←</span> Vorige</button>
+            <button type="submit" class="btn btn-cta" id="genereer-btn">
+              <span id="btn-tekst">Verstuur aanvraag</span>
+              <span id="btn-loader" class="loader hidden"></span>
+            </button>
+          </div>
+        </div>
+
+      </form>
+
+      <!-- FOUTMELDING (klantgericht) -->
+      <div class="alert alert-error hidden" id="fout-melding">
+        <span class="alert-icon">⚠</span>
+        <span id="fout-tekst"></span>
+      </div>
+
+      <!-- BEDANKSCHERM (zichtbaar voor klant na verzenden) -->
+      <div class="bedank-wrapper hidden" id="bedank-sectie">
+        <div class="bedank-card">
+          <div class="bedank-icoon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+          </div>
+          <h2 class="bedank-titel">Aanvraag ontvangen!</h2>
+          <p class="bedank-tekst">Bedankt voor je aanvraag. We gaan direct voor je aan de slag en nemen zo snel mogelijk contact met je op.</p>
+          <p class="bedank-sub">Heb je vragen? Neem contact op via <a href="mailto:info@novumvisuals.nl" class="bedank-link">info@novumvisuals.nl</a></p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <img src="/static/images/logo-color-white.png" alt="Novum Visuals" class="footer-logo" />
+      <p class="footer-text">Professionele video- en fotoproducties</p>
+    </div>
+  </footer>
+
+  <script src="/static/js/main.js"></script>
+</body>
+</html>

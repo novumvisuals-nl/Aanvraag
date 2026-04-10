@@ -1,0 +1,16 @@
+# Geheime bestanden — nooit naar GitHub pushen
+.env
+token.json
+credentials.json
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/
